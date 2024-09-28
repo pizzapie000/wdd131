@@ -53,7 +53,7 @@ main p {
 }
 
 .intro {
-    border-top: .1px solid #000;
+    border-top: .1px solid #000000;
     padding-top: 50px;
 }
 .italicized-text {
@@ -78,4 +78,42 @@ footer {
 footer img {
     width: 150px;
     height: auto;
+}
+
+
+/* This is for dark mode*/
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .content {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .subtitle {
+    text-align: center;
+    margin-bottom: -5px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: .8em;
+    color: #4F9ACF;
+}
+
+body.dark header, body.dark main, body.dark footer {
+    background-color: #333;
+    color: white;
+}
+
+body.dark ol, body.dark p {
+    color: white;
+}
+body.dark footer img {
+    width: 125px;
+    height: auto;
+}
+body.dark .intro {
+    border-top: .1px solid #ffffff;
 }
