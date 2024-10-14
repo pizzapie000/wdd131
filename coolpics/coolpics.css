@@ -99,21 +99,21 @@ img {
 
 @media (max-width: 700px) {
     nav ul {
-        display: none; /* Hide menu items by default */
+        display: block; /* Hide menu items by default */
     }
 
-    nav ul.show {
-        display: block; /* Show menu items when .show is added */
+    nav ul.hide {
+        display: none; /* Show menu items when .show is added */
     }
 }
 
 @media (min-width: 701px) and (max-width: 1000px) {
     nav ul {
-        display: none; /* Hide menu items by default */
+        display: block; /* Hide menu items by default */
     }
 
-    nav ul.show {
-        display: block; /* Show menu items when .show is added */
+    nav ul.hide {
+        display: none; /* Show menu items when .show is added */
     }
 }
 
@@ -121,15 +121,14 @@ img {
     .menu {
         display: none; /* Hide the menu button on large screens */
     }
-
     nav ul {
-        display: flex; /* Show menu items by default on large screens */
+        display: block; /* Show menu items by default on large screens */
         flex-direction: row;
         gap: 1em;
     }
 
-    nav ul.show {
-        display: flex; /* Ensure menu items are shown when .show is added */
+    nav ul.hide {
+        display: none; /* Ensure menu items are shown when .show is added */
     }
 }
 
@@ -151,7 +150,7 @@ img {
         flex-direction: row;
         gap: 1em;
     }
-
+    
     .menu {
         display: none; 
     }
@@ -161,4 +160,55 @@ main h2 {
     text-align: center;
     margin-bottom: 1em;
     width: 100%; 
+}
+
+/* Viewer styles */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    color: var(--accent-color);
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.viewer img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.viewer.hide {
+    display: none;
+}
+
+/* Adjust modal for large screens */
+@media (min-width: 1001px) {
+    .viewer {
+        top: 10%;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+    }
+
+    .viewer img {
+        max-height: 75%;
+        max-width: 75%;
+    }
 }
