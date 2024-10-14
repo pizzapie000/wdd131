@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Call handleResize immediately when the page loads
     handleResize();
 
     // Add event listener to window to watch for resize events
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    // View handler function
     function viewHandler(event) {
         const clickedElement = event.target;
         if (clickedElement.tagName === 'IMG') {
@@ -46,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Close viewer function
     function closeViewer() {
         const viewer = document.querySelector('.viewer');
         if (viewer) {
@@ -54,6 +51,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Add event listener to the gallery
     gallery.addEventListener('click', viewHandler);
 });

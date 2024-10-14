@@ -59,11 +59,11 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Hide menu items by default */
+    display: none; 
 }
 
 nav ul.show {
-    display: block; /* Show menu items when .show is added */
+    display: block; 
 }
 
 nav li {
@@ -99,47 +99,47 @@ img {
 
 @media (max-width: 700px) {
     nav ul {
-        display: block; /* Hide menu items by default */
+        display: block; 
     }
 
     nav ul.hide {
-        display: none; /* Show menu items when .show is added */
+        display: none; 
     }
 }
 
 @media (min-width: 701px) and (max-width: 1000px) {
     nav ul {
-        display: block; /* Hide menu items by default */
+        display: block;
     }
 
     nav ul.hide {
-        display: none; /* Show menu items when .show is added */
+        display: none; 
     }
 }
 
 @media (min-width: 1001px) {
     .menu {
-        display: none; /* Hide the menu button on large screens */
+        display: none; 
     }
     nav ul {
-        display: block; /* Show menu items by default on large screens */
+        display: block;
         flex-direction: row;
         gap: 1em;
     }
 
     nav ul.hide {
-        display: none; /* Ensure menu items are shown when .show is added */
+        display: none; 
     }
 }
 
-/* Switch to two columns at 700px */
+/* Switches to two columns at 700px */
 @media screen and (min-width: 700px) {
     .gallery {
         grid-template-columns: 1fr 1fr; 
     }
 }
 
-/* Switch to three columns at 1000px */
+/* Switches to three columns at 1000px */
 @media screen and (min-width: 1000px) {
     .gallery {
         grid-template-columns: 1fr 1fr 1fr; 
@@ -198,7 +198,7 @@ main h2 {
     display: none;
 }
 
-/* Adjust modal for large screens */
+/* This is the modal for large screens */
 @media (min-width: 1001px) {
     .viewer {
         top: 10%;
