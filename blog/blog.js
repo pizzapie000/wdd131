@@ -37,7 +37,7 @@ const articles = [
 // Build and show the different articles
 function displayArticles() {
     const articlesContainer = document.querySelector('.articles');
-    articlesContainer.innerHTML = ''; // Clear existing content
+    articlesContainer.innerHTML = '';
 
     articles.forEach(article => {
         const articleElement = document.createElement('article');
