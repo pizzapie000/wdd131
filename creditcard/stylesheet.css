@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 400px; /* Set a fixed width for the container */
+    height: 300px; /* Adjusted height to accommodate the submit button */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-areas: 
+        "front"
+        "back"
+        "button";
+    gap: 10px;
+}
+
+.card-front, .card-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #d3d3d3; /* Set the background color to grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace; /* Set the font */
+}
+
+.card-front {
+    grid-area: front;
+    z-index: 2;
+}
+
+.card-back {
+    grid-area: back;
+    z-index: 1;
+    top: 70px; /* Increased offset */
+    left: 70px; /* Increased offset */
+}
+
+.dark-grey-bar {
+    grid-area: bar;
+    background-color: #333;
+    height: 20px; /* Shortened height */
+}
+
+.total-amount, .card-number, .card-holder, .expiration-date, .cvc {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-button {
+    grid-area: button;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    justify-self: end; /* Aligns the button to the right */
+    align-self: end; /* Aligns the button to the bottom */
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
