@@ -233,7 +233,7 @@ footer .attribution {
     .recipe .content {
         display: flex;
         flex-direction: column;
-        order: 2; /* Ensure the content is the second item */
+        order: 2;
     }
     
     .recipe .type {
