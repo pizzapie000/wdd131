@@ -46,8 +46,8 @@ a:hover {
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 1em;
 }
@@ -55,21 +55,24 @@ header {
 header img {
     width: 50px;
     height: auto;
-    margin-right: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 header h1 {
     margin: 0;
     font-family: var(--secondary-font);
     color: var(--primary-color);
+    margin-bottom: 1em;
 }
 
 .search-form {
     display: flex;
     align-items: center;
-    margin: 1em 0;
+    width: 100%;
+    max-width: 500px; /* Limit width for better layout */
+    margin: 0 auto;
+    padding: 0.5em 0; /* Add padding for better spacing */
     position: relative;
-    width: 100%; 
 }
 
 .search-form input {
@@ -77,24 +80,22 @@ header h1 {
     padding: 0.5em;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    padding-right: 2.5em; 
+    padding-right: 2.5em;
 }
 
 .search-form .search-button {
     background: none;
-    border: 1px solid black; 
-    border-radius: 5px; 
-    position: absolute;
-    right: 0; 
-    top: 50%; 
-    transform: translateY(-50%);
+    border: 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
     padding: 0.2em;
+    position: absolute;
+    right: 0em; /* Adjusted position to be next to the input */
 }
 
 .search-form .search-button img {
-    width: 20px; 
-    height: auto;
+    width: 30px;
+    height: 12px;
 }
 
 .search-form button:hover {
@@ -115,10 +116,10 @@ hr {
     margin: 1em 0;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 1em; 
+    padding: 1em;
 }
 
-.recipe img {
+.recipe .recipe-image {
     order: 1;
     width: 100%;
     max-width: 300px;
@@ -128,14 +129,15 @@ hr {
 
 .recipe .type {
     order: 2;
-    font-family: 'Times New Roman', Times, serif; 
-    color: black; 
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
     border: 1px solid black;
-    padding: 5px; 
+    padding: 5px;
     align-self: flex-start;
+    margin-bottom: 0.5em;
 }
 
-.recipe h2 {
+.recipe .recipe_name {
     order: 3;
     margin: 0.5em 0;
     align-self: flex-start;
@@ -155,8 +157,12 @@ hr {
     color: var(--primary-color);
 }
 
-.recipe p {
-    display: none; 
+.recipe .description {
+    order: 5;
+    display: none;
+    color: var(--text-dark);
+    margin-top: 0.5em;
+    font-size: 1em;
 }
 
 footer {
@@ -214,43 +220,52 @@ footer .attribution {
 @media (min-width: 600px) {
     .recipe {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         align-items: flex-start;
         margin: 1em 0;
         border: 1px solid black;
         border-radius: 10px;
-        padding: 1em; 
+        padding: 1em;
     }
-    
-    .recipe img {
-        order: 1; 
+
+    .recipe .recipe-image {
+        order: 1;
         max-width: 300px;
         height: auto;
         border-radius: 10px;
         margin-right: 1em;
+        margin-left: 5em;
     }
-    
+
     .recipe .content {
         display: flex;
         flex-direction: column;
         order: 2;
     }
-    
+
+    .recipe .description {
+        order: 5;
+        display: block;
+        color: var(--text-dark);
+        margin-top: 0.5em;
+        font-size: 1em;
+    }
+
     .recipe .type {
-        order: 1; 
-        font-family: 'Times New Roman', Times, serif; 
-        color: black; 
+        order: 1;
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
         border: 1px solid black;
-        padding: 5px; 
+        padding: 5px;
         align-self: flex-start;
     }
-    
-    .recipe h2 {
-        order: 2; 
+
+    .recipe .recipe_name {
+        order: 2;
         margin: 0.5em 0;
         align-self: flex-start;
     }
-    
+
     .recipe .rating {
         order: 3;
         display: flex;
@@ -258,10 +273,10 @@ footer .attribution {
         margin: 0.5em 0;
         align-self: flex-start;
     }
-    
-    .recipe p {
-        order: 4; 
-        display: block; 
+
+    .recipe .description {
+        order: 4;
+        display: block;
         max-width: 400px;
         margin-left: 0;
     }
@@ -270,59 +285,7 @@ footer .attribution {
 /* Breakpoint at 960px */
 @media (min-width: 960px) {
     .recipe {
-        max-width: 960px; 
-        margin: 0 auto; 
-    }
-}
-
-/* Breakpoint for less than 600px */
-@media (max-width: 600px) {
-    .recipe {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        margin: 1em 0;
-        border: 1px solid black;
-        border-radius: 10px;
-        padding: 1em; 
-    }
-    
-    .recipe img {
-        order: 1;
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 1em;
-    }
-    
-    .recipe .type {
-        order: 2; 
-        font-family: 'Times New Roman', Times, serif; 
-        color: black; 
-        border: 1px solid black;
-        padding: 5px; 
-        align-self: flex-start;
-    }
-    
-    .recipe h2 {
-        order: 3; 
-        margin: 0.5em 0;
-        align-self: flex-start;
-    }
-    
-    .recipe .rating {
-        order: 4; 
-        display: flex;
-        align-items: center;
-        margin: 0.5em 0;
-        align-self: flex-start;
-    }
-    
-    .recipe p {
-        order: 5; 
-        display: block; 
-        max-width: 400px;
-        margin-left: 0;
+        max-width: 960px;
+        margin: 0 auto;
     }
 }
