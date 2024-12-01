@@ -1,6 +1,5 @@
 import recipes from './recipes.mjs';
 
-// Utility Functions
 function random(num) {
     return Math.floor(Math.random() * num);
 }
@@ -11,7 +10,6 @@ function getRandomListEntry(list) {
     return list[randomNum];
 }
 
-// Template Functions
 function ratingTemplate(rating) {
     let html = `
         <span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">
@@ -41,16 +39,16 @@ function recipeTemplate(recipe) {
     `;
 }
 
-// Render Functions
+// Renders the Functions
 function renderRecipes(recipeList) {
     const outputElement = document.querySelector('main');
     const recipesHTML = recipeList.map(recipe => recipeTemplate(recipe)).join('');
     outputElement.innerHTML = recipesHTML;
 }
 
-// Function to handle search
+// Function for the search
 function searchHandler(event) {
-    event.preventDefault(); // Prevents page reload
+    event.preventDefault();
 
     console.log('Search button clicked');
     const query = document.querySelector('#search-input').value.toLowerCase();
@@ -59,7 +57,7 @@ function searchHandler(event) {
     renderRecipes(filteredRecipes);
 }
 
-// Function to filter recipes based on search query
+// Function to filter recipes based on search
 function filterRecipes(query) {
     return recipes
         .filter(recipe => {
@@ -73,34 +71,32 @@ function filterRecipes(query) {
         .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-// Define and Call the `init` Function
+// Defines and Calls the `init` Function
 function init() {
     console.log("Init function executed");
     const recipe = getRandomListEntry(recipes);
     renderRecipes([recipe]);
 }
 
-// Ensure DOM is fully loaded before attaching event listeners
+// Ensures the DOM is fully loaded before attaching event listeners
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if search input is in the DOM
+    // Checks to see if search input is in the DOM
     const searchInput = document.querySelector('#search-input');
     const searchForm = document.querySelector('.search-form');
     console.log('Search input:', searchInput);
     console.log('Search form:', searchForm);
 
-    // Attach event listener to search button
+    // Attaches event listener to search button
     const searchButton = document.querySelector('.search-button');
     if (searchButton) {
         console.log('Search button found, attaching event listener');
         searchButton.addEventListener('click', searchHandler);
     }
 
-    // Initialize the Page
     init();
 
-    // Test for JavaScript Interference
     const allRecipeImages = document.querySelectorAll('.recipe img');
     allRecipeImages.forEach(image => {
-        image.style.borderRadius = '10px'; // Ensure this matches your CSS if needed
+        image.style.borderRadius = '10px';
     });
 });
