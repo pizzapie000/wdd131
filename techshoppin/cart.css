@@ -37,7 +37,7 @@ header {
   padding: 1em;
   background-color: var(--paragraph-background-color);
   color: var (--headline-color-on-color);
-  margin-bottom: 2em; /* Add space below header */
+  margin-bottom: 2em;
 }
 
 header img {
@@ -97,7 +97,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   gap: 2em;
-  margin-bottom: 2em; /* Add space below main content */
+  margin-bottom: 2em;
 }
 
 .cart-items, .checkout-summary, .customer-info {
@@ -105,7 +105,7 @@ nav a:hover {
   padding: 2em;
   background-color: var(--paragraph-background-color);
   border-radius: 8px;
-  border: 2px solid var(--primary-color); /* Add border to columns */
+  border: 2px solid var(--primary-color);
 }
 
 .cart-items h2, .checkout-summary h2, .customer-info h2 {
@@ -164,5 +164,5 @@ footer {
   padding: 1em;
   background-color: var(--paragraph-background-color);
   color: var(--headline-color-on-color);
-  margin-top: 2em; /* Add space above footer */
+  margin-top: 2em;
 }

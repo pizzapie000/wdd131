@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to display cart items
     function displayCartItems() {
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cartItemsContainer.innerHTML = ""; // Clear existing cart items
+        cartItemsContainer.innerHTML = "";
 
         if (cart.length === 0) {
             cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
@@ -33,20 +33,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to display checkout summary
+    // Function to show checkout summary
     function displayCheckoutSummary() {
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         let total = 0;
         let shipping = 10.50;
         let tax = 0;
 
-        checkoutSummaryContainer.innerHTML = ""; // Clear existing summary
+        checkoutSummaryContainer.innerHTML = "";
 
         if (cart.length === 0) {
             checkoutSummaryContainer.innerHTML = "<p>No items to checkout.</p>";
         } else {
             cart.forEach(item => {
-                const itemPrice = 499.99; // Example price, replace with actual price
+                const itemPrice = 499.99; // Example price
                 total += itemPrice;
                 const summaryItemElement = document.createElement("div");
                 summaryItemElement.classList.add("summary-item");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkoutSummaryContainer.appendChild(summaryItemElement);
             });
 
-            tax = total * 0.05; // Example tax calculation, replace with actual tax rate
+            tax = total * 0.05; // Example tax calculation
             total += shipping + tax;
 
             const shippingElement = document.createElement("div");

@@ -2,8 +2,8 @@
 
 :root {
   --primary-color: #4A90E2;
-  --secondary-color: #FF4500; /* Updated secondary color */
-  --accent1-color: #000028; /* First accent color */
+  --secondary-color: #FF4500;
+  --accent1-color: #000028; 
   --accent2-color: #9cff00;
   --heading-font: "IM Fell";
   --paragraph-font: Lato, Helvetica, sans-serif;
@@ -12,12 +12,12 @@
   --paragraph-color-on-white: var(--primary-color);
   --paragraph-color-on-color: white;
   --paragraph-background-color: var(--primary-color);
-  --nav-link-color: var(--accent1-color); /* Change text color to first accent color */
+  --nav-link-color: var(--accent1-color); 
   --nav-background-color: var(--secondary-color);
-  --nav-hover-link-color: var(--accent2-color); /* Accent 2 color for hover text */
-  --nav-hover-background-color: var(--accent1-color); /* Accent 1 color for hover background */
-  --background-color: #121212; /* Dark background color */
-  --text-color: #ffffff; /* White text color */
+  --nav-hover-link-color: var(--accent2-color); 
+  --nav-hover-background-color: var(--accent1-color);
+  --background-color: #121212; 
+  --text-color: #ffffff; 
 }
 
 body {
@@ -26,9 +26,9 @@ body {
   padding: 4em;
   font-size: 18px;
   font-family: var(--paragraph-font);
-  background-color: var(--background-color); /* Apply dark background */
-  color: var(--text-color); /* Apply white text color */
-}
+  background-color: var(--background-color); 
+  color: var(--text-color); 
+} /* Missing closing brace */
 
 header {
   display: flex;
@@ -40,12 +40,12 @@ header {
 }
 
 header img {
-  height: 150px; /* Increase the height of the logo */
+  height: 150px; 
 }
 
 header button {
   background-color: var(--secondary-color);
-  color: var(--accent1-color); /* Change text color to first accent color */
+  color: var(--accent1-color); 
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
@@ -54,9 +54,9 @@ header button {
 header input {
   padding: 0.5em;
   font-size: 1em;
-  background-color: var(--background-color); /* Apply dark background */
-  color: var(--text-color); /* Apply white text color */
-  border: 1px solid var(--text-color); /* Add border for visibility */
+  background-color: var(--background-color);
+  color: var(--text-color); 
+  border: 1px solid var(--text-color); 
 }
 
 header .cart {
@@ -84,12 +84,12 @@ nav a {
   padding: 1em;
   min-width: 120px;
   text-decoration: none;
-  color: var(--nav-link-color); /* Change text color to first accent color */
+  color: var(--nav-link-color);
 }
 
 nav a:hover {
-  color: var(--nav-hover-link-color); /* Change text color on hover */
-  background-color: var(--nav-hover-background-color); /* Change background color on hover */
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
 }
 
 .hero {
@@ -102,49 +102,49 @@ nav a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  transform: translateY(-100%); /* Move the title higher */
+  transform: translateY(-100%); 
   margin-left: 1em;
-  margin-top: 1em; /* Add space between the title and products */
-}
+  margin-top: 1em; 
+} /* Missing closing brace */
 
 .product-gallery {
   display: flex;
   justify-content: space-between;
-  margin-top: 2em; /* Add space between the title and products */
+  margin-top: 2em; 
 }
 
 .column {
-  width: 23%; /* Adjust width to fit 4 columns side by side */
-}
+  width: 23%; 
+} /* Missing closing brace */
 
 .product {
   text-align: center;
   margin: 1em 0;
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  box-sizing: border-box; 
 }
 
 .product img {
-  width: 100%; /* Make images responsive */
-  height: 150px; /* Set a fixed height for images */
-  object-fit: cover; /* Ensure images cover the fixed height */
+  width: 100%; 
+  height: 150px; 
+  object-fit: cover; 
 }
 
 .product-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 150px; /* Set a minimum height for product details */
-}
+  min-height: 150px; 
+} /* Missing closing brace */
 
 .product-details h3 {
   margin: 0.5em 0;
   text-align: center;
-  height: 2.5em; /* Set a fixed height for titles */
-  overflow: hidden; /* Hide overflow text */
+  height: 2.5em; 
+  overflow: hidden; 
 }
 
 .product-details h3 a {
-  color: var(--primary-color); /* Apply primary color to product title links */
+  color: var(--primary-color); 
 }
 
 .product-details p {

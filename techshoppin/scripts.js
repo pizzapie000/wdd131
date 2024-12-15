@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 ...data[key]
             }));
 
-            // Function to display products
+            // Function to show products
             function displayProducts(productsToDisplay) {
                 const columns = [document.getElementById("column1"), document.getElementById("column2"), document.getElementById("column3"), document.getElementById("column4")];
-                columns.forEach(column => column.innerHTML = ""); // Clear existing products
+                columns.forEach(column => column.innerHTML = "");
 
                 productsToDisplay.forEach((product, index) => {
                     const productElement = document.createElement("div");
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return shuffledProducts.slice(0, 4);
             }
 
-            // Function to add item to cart
+            // Function to add an item to the cart
             function addToCart(productName) {
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
                 cart.push(productName);
@@ -52,20 +52,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 updateCartNumber();
             }
 
-            // Function to update cart number in header
+            // Function to update cart number in the header
             function updateCartNumber() {
                 const cart = JSON.parse(localStorage.getItem("cart")) || [];
                 const cartNumber = document.querySelector(".cart span");
                 cartNumber.textContent = cart.length;
             }
 
-            // Initial display of 4 random products
+            // First shows 4 random products
             displayProducts(getRandomProducts(products));
 
-            // Initial update of cart number
             updateCartNumber();
 
-            // Search functionality
+            // Search function
             const searchInput = document.getElementById("search-input");
             searchInput.addEventListener("input", function() {
                 const searchTerm = searchInput.value.toLowerCase();
@@ -73,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 displayProducts(filteredProducts);
             });
 
-            // Check for search term in URL
             const urlParams = new URLSearchParams(window.location.search);
             const searchTerm = urlParams.get("search");
             if (searchTerm) {
