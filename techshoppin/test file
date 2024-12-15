@@ -1,0 +1,43 @@
+import unittest
+from datetime import datetime
+from InventoryManager import load_products, save_products, add_product, delete_product, count_brand_products
+
+class TestInventoryManager(unittest.TestCase):
+
+    def setUp(self):
+        # Setup a sample products dictionary for testing
+        self.products = {
+            "Cooler Master Case": {
+                "cost": 99.99,
+                "image": "cooler_master_case.jpg",
+                "rating": 4,
+                "added_on": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            },
+            "Corsair RAM": {
+                "cost": 79.99,
+                "image": "corsair_ram.jpg",
+                "rating": 5,
+                "added_on": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            }
+        }
+
+    def test_add_product(self):
+        # Test adding a new product
+        add_product(self.products, "Asus Motherboard", 199.99, "asus_motherboard.jpg", 5)
+        self.assertIn("Asus Motherboard", self.products)
+        self.assertEqual(self.products["Asus Motherboard"]["cost"], 199.99)
+        self.assertEqual(self.products["Asus Motherboard"]["image"], "asus_motherboard.jpg")
+        self.assertEqual(self.products["Asus Motherboard"]["rating"], 5)
+
+    def test_delete_product(self):
+        # Test deleting an existing product
+        delete_product(self.products, "Cooler Master Case")
+        self.assertNotIn("Cooler Master Case", self.products)
+
+    def test_count_brand_products(self):
+        # Test counting products of a specific brand
+        count = count_brand_products(self.products, "Corsair")
+        self.assertEqual(count, 1)
+
+if __name__ == '__main__':
+    unittest.main()

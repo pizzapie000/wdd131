@@ -1,38 +1,168 @@
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #FF4500;
+  --accent1-color: #000028;
+  --accent2-color: #9cff00;
+  --heading-font: "IM Fell";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--accent1-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: var(--accent2-color);
+  --nav-hover-background-color: var(--accent1-color);
+  --background-color: #121212;
+  --text-color: #ffffff;
 }
 
-.cart-table th, .cart-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  font-family: var(--paragraph-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-.cart-table th {
-    background-color: var(--primary-color);
-    color: white;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--paragraph-background-color);
+  color: var (--headline-color-on-color);
+  margin-bottom: 2em; /* Add space below header */
 }
 
-.cart-summary {
-    text-align: right;
-    margin: 20px 0;
+header img {
+  height: 150px;
 }
 
-.cart-summary p {
-    font-size: 1.2em;
-    margin: 5px 0;
+header button {
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
 
-.cart-summary button {
-    padding: 10px 20px;
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
+header input {
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
-.cart-summary button:hover {
-    background-color: var(--primary-color);
+header .cart {
+  display: flex;
+  align-items: center;
+}
+
+header .cart img {
+  height: 30px;
+}
+
+header .cart span {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+nav a {
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  margin-bottom: 2em; /* Add space below main content */
+}
+
+.cart-items, .checkout-summary, .customer-info {
+  flex: 1;
+  padding: 2em;
+  background-color: var(--paragraph-background-color);
+  border-radius: 8px;
+  border: 2px solid var(--primary-color); /* Add border to columns */
+}
+
+.cart-items h2, .checkout-summary h2, .customer-info h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+}
+
+.cart-item, .summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.cart-item p, .summary-item p {
+  margin: 0;
+}
+
+.remove-from-cart {
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+#checkout-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+#checkout-button:hover {
+  background-color: var(--accent1-color);
+}
+
+.customer-info label {
+  display: block;
+  margin: 1em 0 0.5em;
+}
+
+.customer-info input, .customer-info select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+  margin-top: 2em; /* Add space above footer */
 }

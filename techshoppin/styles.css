@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #FF4500; /* Updated secondary color */
+  --accent1-color: #000028; /* First accent color */
+  --accent2-color: #9cff00;
+  --heading-font: "IM Fell";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--accent1-color); /* Change text color to first accent color */
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: var(--accent2-color); /* Accent 2 color for hover text */
+  --nav-hover-background-color: var(--accent1-color); /* Accent 1 color for hover background */
+  --background-color: #121212; /* Dark background color */
+  --text-color: #ffffff; /* White text color */
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  font-family: var(--paragraph-font);
+  background-color: var(--background-color); /* Apply dark background */
+  color: var(--text-color); /* Apply white text color */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+}
+
+header img {
+  height: 150px; /* Increase the height of the logo */
+}
+
+header button {
+  background-color: var(--secondary-color);
+  color: var(--accent1-color); /* Change text color to first accent color */
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+header input {
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: var(--background-color); /* Apply dark background */
+  color: var(--text-color); /* Apply white text color */
+  border: 1px solid var(--text-color); /* Add border for visibility */
+}
+
+header .cart {
+  display: flex;
+  align-items: center;
+}
+
+header .cart img {
+  height: 30px;
+}
+
+header .cart span {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+nav a {
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  color: var(--nav-link-color); /* Change text color to first accent color */
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color); /* Change text color on hover */
+  background-color: var(--nav-hover-background-color); /* Change background color on hover */
+}
+
+.hero {
+  text-align: center;
+  padding: 2em 0;
+  position: relative;
+}
+
+.newest-additions-title {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-100%); /* Move the title higher */
+  margin-left: 1em;
+  margin-top: 1em; /* Add space between the title and products */
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em; /* Add space between the title and products */
+}
+
+.column {
+  width: 23%; /* Adjust width to fit 4 columns side by side */
+}
+
+.product {
+  text-align: center;
+  margin: 1em 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.product img {
+  width: 100%; /* Make images responsive */
+  height: 150px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensure images cover the fixed height */
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 150px; /* Set a minimum height for product details */
+}
+
+.product-details h3 {
+  margin: 0.5em 0;
+  text-align: center;
+  height: 2.5em; /* Set a fixed height for titles */
+  overflow: hidden; /* Hide overflow text */
+}
+
+.product-details h3 a {
+  color: var(--primary-color); /* Apply primary color to product title links */
+}
+
+.product-details p {
+  margin: 0.5em 0;
+}
+
+.rating {
+  font-size: 1.2em;
+  color: gold;
+}
+
+.add-to-cart {
+  display: block;
+  margin-top: 0.5em;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.add-to-cart:hover {
+  background-color: var(--accent1-color);
+}
+
+.about-us {
+  padding: 2em 0;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+}

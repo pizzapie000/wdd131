@@ -1,0 +1,62 @@
+{
+    "AMD Radeon RX 7900 XTX": {
+        "cost": 999.99,
+        "image": "RX7900XTX.jpg",
+        "rating": 4,
+        "added_on": "2024-12-14 14:50:52"
+    },
+    "Xbox Series X": {
+        "cost": 499.99,
+        "image": "XBOXSeriesX.jpeg",
+        "rating": 4,
+        "added_on": "2024-12-14 14:52:15"
+    },
+    "Gigabyte B650 Eagle AM5 Motherboard": {
+        "cost": 159.99,
+        "image": "GigabyteB650.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 14:53:57"
+    },
+    "ASUS TUF Gaming 27 Inch 2k HDR Gaming Monitor": {
+        "cost": 265.0,
+        "image": "ASUS1440p.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 14:56:14"
+    },
+    "HyperX Cloud Stinger Core Wireless": {
+        "cost": 59.99,
+        "image": "CloudStingerCore.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 18:03:01"
+    },
+    "Cherry MX 3.0 Wired Mechanical Keyboard": {
+        "cost": 79.99,
+        "image": "CherryMX3.0.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 18:15:11"
+    },
+    "Razer Viper Ultimate Wireless Mouse": {
+        "cost": 99.99,
+        "image": "RazerViperUltimate.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 18:17:16"
+    },
+    "Teamgroup 32GB DDR5": {
+        "cost": 84.99,
+        "image": "Teamgroup32GB.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 18:18:47"
+    },
+    "Thermalright Aqua Elite 360 AIO CPU Cooler": {
+        "cost": 54.59,
+        "image": "Thermalright360AIO.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 18:20:39"
+    },
+    "AMD Ryzen 5 7600x CPU": {
+        "cost": 193.98,
+        "image": "Ryzen57600x.jpg",
+        "rating": 5,
+        "added_on": "2024-12-14 18:22:50"
+    }
+}

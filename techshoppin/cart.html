@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <meta charset="utf-8" />
-        <title>TechShoppin Cart</title>
-        <link type="text/css" rel="stylesheet" href="site-plan.css" />
+        <meta charset="utf-8" /> <!-- Meta Charset Attribute -->
+        <title>TechShoppin - Cart</title> <!-- Title Element -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport Meta Element -->
+        <meta name="description" content="TechShoppin - Your cart items." /> <!-- Meta Description Element -->
+        <meta name="author" content="Byron Bursett" /> <!-- Meta Author Element -->
+        <link type="text/css" rel="stylesheet" href="cart.css" /> <!-- Link reference to your CSS file -->
     </head>
-
     <body>
         <header>
-            <h1>TechShoppin Cart</h1>
+            <img src="images/TechShoppinLogo.png" alt="TechShoppin Logo" />
+            <button>Login</button>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <div class="cart">
+                <img src="images/cart.png" alt="Cart" />
+                <span>3</span>
+            </div>
             <nav>
-                <a href="site-plan.html">Home</a>
-                <a href="cart.html">Cart</a>
-                <a href="#">Page3</a>
+                <a href="index.html">Home</a> <!-- Link to home page -->
+                <a href="cart.html">Cart</a> <!-- Link to cart page -->
+                <a href="#" id="about-us-link">About Us</a> <!-- Add id to About Us link -->
             </nav>
         </header>
-        <main>
-            <h2>Your Shopping Cart</h2>
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Example product row -->
-                    <tr>
-                        <td>Product 1</td>
-                        <td>1</td>
-                        <td>$99.99</td>
-                        <td>$99.99</td>
-                    </tr>
-                    <!-- Add more product rows as needed -->
-                </tbody>
-            </table>
-            <div class="cart-summary">
-                <p>Subtotal: $99.99</p>
-                <p>Tax: $8.00</p>
-                <p>Total: $107.99</p>
-                <button>Proceed to Checkout</button>
-            </div>
+        <main class="main-content"> <!-- Add class for main content -->
+            <section class="cart-items">
+                <h2>Your Cart</h2>
+                <div id="cart-items-container"></div>
+            </section>
+            <section class="checkout-summary">
+                <h2>Checkout Summary</h2>
+                <div id="checkout-summary-container"></div>
+            </section>
+            <section class="customer-info">
+                <h2>Customer Information</h2>
+                <form id="customer-info-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="credit-card">Credit Card:</label>
+                    <select id="credit-card" name="credit-card" required>
+                        <option value="">Select Card</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                    <button type="submit" id="checkout-button">Check Out</button>
+                </form>
+            </section>
         </main>
+        <footer>
+            <p>&copy; 2024 TechShoppin. All rights reserved.</p>
+        </footer>
+        <script src="cart.js"></script> <!-- Script Element linking to a Javascript file -->
     </body>
 </html>
