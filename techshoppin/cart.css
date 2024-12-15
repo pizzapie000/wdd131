@@ -36,7 +36,7 @@ header {
   align-items: center;
   padding: 1em;
   background-color: var(--paragraph-background-color);
-  color: var (--headline-color-on-color);
+  color: var(--headline-color-on-color);
   margin-bottom: 2em;
 }
 
@@ -110,7 +110,7 @@ nav a:hover {
 
 .cart-items h2, .checkout-summary h2, .customer-info h2 {
   font-family: var(--heading-font);
-  color: var(--headline-color-on-color);
+  color: var(--accent1-color);
 }
 
 .cart-item, .summary-item {
@@ -122,6 +122,11 @@ nav a:hover {
 
 .cart-item p, .summary-item p {
   margin: 0;
+  color: var(--accent1-color);
+}
+
+.cart-items p, .checkout-summary p {
+  color: var(--accent1-color);
 }
 
 .remove-from-cart {
@@ -134,7 +139,7 @@ nav a:hover {
 
 #checkout-button {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--accent1-color);
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
@@ -143,11 +148,13 @@ nav a:hover {
 
 #checkout-button:hover {
   background-color: var(--accent1-color);
+  color: white;
 }
 
 .customer-info label {
   display: block;
   margin: 1em 0 0.5em;
+  color: var(--accent1-color);
 }
 
 .customer-info input, .customer-info select {
@@ -163,6 +170,6 @@ footer {
   text-align: center;
   padding: 1em;
   background-color: var(--paragraph-background-color);
-  color: var(--headline-color-on-color);
+  color: var(--accent1-color);
   margin-top: 2em;
 }
