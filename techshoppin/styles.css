@@ -28,7 +28,7 @@ body {
   font-family: var(--paragraph-font);
   background-color: var(--background-color); 
   color: var(--text-color); 
-} /* Missing closing brace */
+}
 
 header {
   display: flex;
@@ -105,7 +105,7 @@ nav a:hover {
   transform: translateY(-100%); 
   margin-left: 1em;
   margin-top: 1em; 
-} /* Missing closing brace */
+}
 
 .product-gallery {
   display: flex;
@@ -115,7 +115,7 @@ nav a:hover {
 
 .column {
   width: 23%; 
-} /* Missing closing brace */
+}
 
 .product {
   text-align: center;
@@ -134,7 +134,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   min-height: 150px; 
-} /* Missing closing brace */
+}
 
 .product-details h3 {
   margin: 0.5em 0;
@@ -160,13 +160,14 @@ nav a:hover {
   display: block;
   margin-top: 0.5em;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--accent1-color);
   padding: 0.5em;
   text-decoration: none;
 }
 
 .add-to-cart:hover {
   background-color: var(--accent1-color);
+  color: white;
 }
 
 .about-us {
@@ -178,5 +179,5 @@ footer {
   text-align: center;
   padding: 1em;
   background-color: var(--paragraph-background-color);
-  color: var(--headline-color-on-color);
+  color: var(--accent1-color);
 }
